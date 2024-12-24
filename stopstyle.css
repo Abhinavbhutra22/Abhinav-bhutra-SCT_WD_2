@@ -1,0 +1,134 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #e4e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.stopwatch-container {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+#time-display {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.buttons .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 45%;
+}
+
+.buttons .btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.buttons .btn:hover:enabled {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#lap {
+    background-color: #008cff;
+}
+
+#lap:hover:enabled {
+    background-color: #008cff;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    font-size: 16px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    .stopwatch-container {
+        padding: 30px 40px;
+        width: 90%;
+    }
+
+    #time-display {
+        font-size: 40px;
+    }
+
+    .buttons .btn {
+        padding: 10px 18px;
+        font-size: 18px;
+        width: 48%;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
